@@ -12,22 +12,28 @@ public class OrderedArrayList< T extends Comparable<T> > extends NoNullArrayList
 
   private int getIndex(T t) {
     int index = 0;
-    for(T t : n) {
-      if ( t.compareTo(n) > 0 ) return n;
+    for(int i = 0; i < size(); i++) {
+      if ( t.compareTo( get(i) ) < 0 ) return index;
+      index++;
     }
     return -1;
   }
 
   public boolean add(T t) {
-    int index = getIndex(t);
-    if (index == -1) return super.add(t);
-    else return super.add(index, t);
+    int i = getIndex(t);
+    if (i == -1) return super.add(t);
+    else {
+      super.add(i, t);
+      return true;
+    }
   }
 
   public void add(int index, T t) {
-    if index = getIndex(t);
-    if (index == -1) super.add(t);
-    else super.add(t);
+    int i = getIndex(t);
+    if (i == -1) super.add(t);
+    else {
+      super.add(i, t);
+    }
   }
 
 }
