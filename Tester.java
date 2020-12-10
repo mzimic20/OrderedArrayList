@@ -1,6 +1,8 @@
 public class Tester {
 
   public static void main(String[]args) {
+    System.out.println("--- NoNullArrayList ---");
+
     NoNullArrayList<String> a = new NoNullArrayList<String>();
     NoNullArrayList<String> b = new NoNullArrayList<String>(15);
 
@@ -18,6 +20,8 @@ public class Tester {
 
     System.out.println("a: " + a );
     System.out.println("b: " + b );
+
+    System.out.println("--- OrderedArrayList ---");
   }
 
 }
