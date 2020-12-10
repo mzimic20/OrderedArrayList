@@ -37,13 +37,19 @@ public class Tester {
     c.add("burek");
     c.add("torta");
     c.add("jabuka");
-//
+
     d.add(6);
     d.add(1);
     d.add(100);
     d.add(-4);
     d.add(99);
     d.add(679);
+
+    System.out.println("c: " + c );
+    System.out.println("d: " + d );
+
+    c.set(2, "kruska");
+    d.set(0, 5);
 
     System.out.println("c: " + c );
     System.out.println("d: " + d );

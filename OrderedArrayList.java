@@ -36,4 +36,12 @@ public class OrderedArrayList< T extends Comparable<T> > extends NoNullArrayList
     }
   }
 
+  public T set(int index, T t) {
+    T out = get(index);
+    remove(index);
+    int i = getIndex(t);
+    add(i, t);
+    return out;
+  }
+
 }
